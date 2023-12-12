@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'user_app',
+    'cors_headers',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'cors_headers.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'Rest_TeLlevoAPP.urls'
@@ -145,3 +147,5 @@ REST_FRAMEWORK = {
     ]
     
 }
+
+CORS_ORIGIN_ALLOW_ALL = True
